@@ -20,7 +20,7 @@
     - "echo $LOCAL_VERSION"
     - "echo $PUBLISHED_VERSION"
     - ""
-    - "if [ dpkg --compare-versions \"$LOCAL_VERSION\" \"gt\" \"$PUBLISHED_VERSION\" ]; then"
+    - "if [ dpkg --compare-versions \"${LOCAL_VERSION}\" \"gt\" \"${PUBLISHED_VERSION}\" ]; then"
     - "    npm-cli-login -u ${NPM_USERNAME} -p ${NPM_PASSWORD} -e ${NPM_EMAIL}"
     - "    npm publish --access public"
     - "fi"
