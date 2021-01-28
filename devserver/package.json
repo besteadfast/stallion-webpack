@@ -1,0 +1,22 @@
+{
+  "name": "stallion-webpack-devserver",
+  "version": "1.0.0",
+  "description": "TBD",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/besteadfast/stallion-webpack.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Steadfast Design Firm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/besteadfast/stallion-webpack/issues"
+  },
+  "homepage": "https://github.com/besteadfast/stallion-webpack#readme"
+}

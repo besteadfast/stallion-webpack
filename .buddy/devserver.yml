@@ -1,0 +1,26 @@
+- pipeline: "DevServer"
+  trigger_mode: "ON_EVERY_PUSH"
+  ref_name: "main"
+  ref_type: "BRANCH"
+  priority: "NORMAL"
+  fail_on_prepare_env_warning: true
+  trigger_condition: "ON_CHANGE_AT_PATH"
+  trigger_condition_paths:
+  - "/.buddy/devserver.yml"
+  - "/devserver/"
+  actions:
+  - action: "Publish NPM Package"
+    type: "BUILD"
+    working_directory: "/buddy/stallion-webpack/devserver"
+    docker_image_name: "library/node"
+    docker_image_tag: "latest"
+    execute_commands:
+    - "npm-cli-login -u '${NPM_USERNAME}' -p '${NPM_PASSWORD}' -e '${NPM_EMAIL}'"
+    - "npm whoami"
+    - "# npm publish --access public --dry-run"
+    setup_commands:
+    - "npm install -g npm-cli-login"
+    volume_mappings:
+    - "/:/buddy/stallion-webpack"
+    trigger_condition: "ALWAYS"
+    shell: "BASH"
