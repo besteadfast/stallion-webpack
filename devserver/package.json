@@ -1,6 +1,6 @@
 {
   "name": "@besteadfast/stallion-webpack-devserver",
-  "version": "1.0.0.1",
+  "version": "1.0.0",
   "description": "TBD",
   "main": "index.js",
   "scripts": {
