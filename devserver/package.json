@@ -1,5 +1,5 @@
 {
-  "name": "stallion-webpack-devserver",
+  "name": "@besteadfast/stallion-webpack-devserver",
   "version": "1.0.0",
   "description": "TBD",
   "main": "index.js",
