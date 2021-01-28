@@ -15,9 +15,8 @@
     docker_image_name: "library/node"
     docker_image_tag: "latest"
     execute_commands:
-    - "npm-cli-login -u '${NPM_USERNAME}' -p '${NPM_PASSWORD}' -e '${NPM_EMAIL}'"
-    - "npm whoami"
-    - "# npm publish --access public --dry-run"
+    - "npm-cli-login -u ${NPM_USERNAME} -p ${NPM_PASSWORD} -e ${NPM_EMAIL}"
+    - "npm publish --access public --dry-run"
     setup_commands:
     - "npm install -g npm-cli-login"
     volume_mappings:
