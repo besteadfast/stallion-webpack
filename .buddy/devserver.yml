@@ -17,9 +17,6 @@
     execute_commands:
     - "LOCAL_VERSION=$(node -pe \"require('./package.json').version\")"
     - "PUBLISHED_VERSION=$(npm view . version)"
-    - "echo $LOCAL_VERSION"
-    - "echo $PUBLISHED_VERSION"
-    - ""
     - "if [ dpkg --compare-versions \"${LOCAL_VERSION}\" \"gt\" \"${PUBLISHED_VERSION}\" ]; then"
     - "    npm-cli-login -u ${NPM_USERNAME} -p ${NPM_PASSWORD} -e ${NPM_EMAIL}"
     - "    npm publish --access public"
@@ -29,4 +26,4 @@
     volume_mappings:
     - "/:/buddy/stallion-webpack"
     trigger_condition: "ALWAYS"
-    shell: "BASH"
+    shell: "SH"
