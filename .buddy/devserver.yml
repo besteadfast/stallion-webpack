@@ -16,7 +16,7 @@
     docker_image_tag: "latest"
     execute_commands:
     - "npm-cli-login -u ${NPM_USERNAME} -p ${NPM_PASSWORD} -e ${NPM_EMAIL}"
-    - "npm publish --access public --dry-run"
+    - "npm publish --access public"
     setup_commands:
     - "npm install -g npm-cli-login"
     volume_mappings:
